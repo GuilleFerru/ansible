@@ -1,0 +1,9 @@
+- hosts: server1
+  become: true
+  remote_user: ec2-user
+  tasks:
+    - name: install wget
+      yum:
+        name: wget
+        state: latest
+        
