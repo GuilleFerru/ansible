@@ -29,6 +29,8 @@ pipeline {
 
 
                     sh 'ansible-playbook -i hosts playbooks/server1_config.yml'
+
+                    sh 'ansible-playbook -i hosts playbooks/server1_jboss.yml'
                 }
             }
         }           
