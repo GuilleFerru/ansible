@@ -1,9 +1,21 @@
+---
 - hosts: server1
   become: true
   remote_user: ec2-user
   tasks:
-    - name: install wget
-      yum:
-        name: wget
-        state: latest
-        
+  - name: Install wget
+    yum:
+      name: wget
+      state: latest
+  - name: Install nmap
+    yum:
+      name: nmap
+      state: latest
+  - name: Install Java 17
+    yum:
+      name: java-17-openjdk
+      state: latest
+  - name: Install unzip
+    yum:
+      name: unzip
+      state: latest  
